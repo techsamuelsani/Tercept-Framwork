@@ -1,0 +1,45 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TerceptSDK
+import AdSupport
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public class TerceptOptimization {
+  public init(_ networkCode: Swift.String, _ IDFA: Swift.String?, _ IDFV: Swift.String, _ params: [Swift.String : Swift.String])
+  public convenience init(_ networkCode: Swift.String, _ IDFA: Swift.String?, _ IDFV: Swift.String)
+  public convenience init(_ networkCode: Swift.String, useIdfa flag: Swift.Bool)
+  public convenience init(_ networkCode: Swift.String, useIdfa flag: Swift.Bool, _ params: [Swift.String : Swift.String])
+  public func fetch(_ adunits: [Swift.String])
+  public func fetch(_ adunits: [Swift.String], _ dynamicCustomParams: [Swift.String : Swift.String])
+  public func getCustomTargetingKeys(_ adunit: Swift.String) -> [Swift.String : Swift.String]
+  public func logEvent(_ adunit: Swift.String, _ event: Swift.String)
+  public func logEvent(_ adunit: Swift.String, _ event: Swift.String, _ customParameters: [Swift.String : Swift.String])
+  public func logEvent(_ adunit: Swift.String, _ event: TerceptSDK.GAMEVENTS)
+  public func logEvent(_ adunit: Swift.String, _ event: TerceptSDK.GAMEVENTS, _ customParameters: [Swift.String : Swift.String])
+  public func sendEventsData()
+  public func setCustomParameters(_ params: [Swift.String : Swift.String])
+  public func getEventsData() -> Swift.String
+  @objc deinit
+}
+public enum GAMEVENTS : Swift.String {
+  case onAdClicked
+  case onAdClosed
+  case onAdFailedToLoad
+  case onAdImpression
+  case onAdLeftApplication
+  case onAdLoaded
+  case onAdOpened
+  case onFirstQuartile
+  case onMidPoint
+  case onThirdQuartile
+  case onStarted
+  case onSkipped
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
