@@ -11,5 +11,5 @@ Pod::Spec.new do |spec|
     spec.source = { :git => "https://github.com/techsamuelsani/Tercept-Framwork.git", :tag => '1.0.0' }
       
     # Published binaries
-    vendored_frameworks = "Sources/TerceptSDK.xcframework"
+    spec.vendored_frameworks = "Sources/TerceptSDK.xcframework"
   end
